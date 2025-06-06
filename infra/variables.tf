@@ -3,10 +3,31 @@ variable "project_id" {
   type        = string
 }
 
+variable "project_name" {
+  description = "Project Name"
+  type        = string
+}
+
+variable "vpc_name" {
+  description = "GCP VPC Name"
+  type        = string
+}
+
 variable "region" {
   description = "Region for resources"
   type        = string
   default     = "us-central1"
+}
+
+variable "zone" {
+  description = "Zone for resources"
+  type        = string
+}
+
+variable "cidr_range" {
+  description = "Region for resources"
+  type        = string
+  default     = "10.10.0.0/24"
 }
 
 variable "vm_machine_type" {
@@ -28,7 +49,6 @@ variable "mongo_uri" {
 variable "frontend_api_url" {
   description = "Base URL for the FastAPI backend"
   type        = string
-  default     = "{Add here your API domain name}}/api/explorer/search"
 }
 
 variable "redeploy_version" {
