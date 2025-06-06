@@ -162,7 +162,7 @@ NGINX_CONF
 }
 
 resource "google_compute_region_instance_group_manager" "heritage_group" {
-  name                = "heritage-lens-group"
+  name                = "heritage-lens-template-${var.redeploy_version}"
   region              = var.region
   version {
     instance_template = google_compute_instance_template.heritage_template.id
