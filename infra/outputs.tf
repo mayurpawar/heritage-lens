@@ -5,3 +5,7 @@ output "instance_group_manager" {
 output "instance_template" {
   value = google_compute_instance_template.heritage_template.self_link
 }
+
+output "vm_external_ip" {
+  value = google_compute_instance.heritage_vm.network_interface[0].access_config[0].nat_ip
+}
