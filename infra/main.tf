@@ -32,6 +32,18 @@ resource "google_compute_firewall" "allow_http" {
   target_tags   = ["heritage-lens-backend"]
 }
 
+resource "google_compute_firewall" "allow_https" {
+  name    = "allow-https"
+  network = google_compute_network.vpc_network.name
+
+  allow {
+    protocol = "tcp"
+    ports    = ["443"]
+  }
+  source_ranges = ["0.0.0.0/0"]
+  target_tags   = ["heritage-lens-backend"]
+}
+
 resource "google_compute_instance_template" "heritage_template" {
   name           = "heritage-lens-template-${var.redeploy_version}"
   machine_type   = var.vm_machine_type
@@ -57,6 +69,7 @@ resource "google_compute_instance_template" "heritage_template" {
 
     apt-get update
     apt-get install -y git python3-venv nginx
+    apt-get install -y certbot python3-certbot-nginx
 
     mkdir -p /opt/heritage-lens
     cd /opt/heritage-lens
@@ -120,7 +133,7 @@ EOF
     cat >/etc/nginx/sites-available/heritage-lens <<"NGINX_CONF"
 server {
     listen 80;
-    server_name _;
+    server_name heritage.mayurpawar.com www.heritage.mayurpawar.com;
 
     location / {
         proxy_pass http://127.0.0.1:8501;
