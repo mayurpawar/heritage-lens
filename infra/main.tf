@@ -116,8 +116,8 @@ Restart=always
 WantedBy=multi-user.target
 EOF
 
-    # NGINX PROXY CONFIGURATION
-    cat >/etc/nginx/sites-available/heritage-lens <<NGINX_CONF
+    # NGINX PROXY CONFIGURATION (disable variable expansion!)
+    cat >/etc/nginx/sites-available/heritage-lens <<"NGINX_CONF"
 server {
     listen 80;
     server_name _;
@@ -142,7 +142,6 @@ server {
         proxy_set_header X-Forwarded-Proto $scheme;
     }
 }
-
 NGINX_CONF
 
     ln -sf /etc/nginx/sites-available/heritage-lens /etc/nginx/sites-enabled/heritage-lens
@@ -188,4 +187,3 @@ resource "google_compute_region_instance_group_manager" "heritage_group" {
 #     request_path     = "/"
 #   }
 # }
-
