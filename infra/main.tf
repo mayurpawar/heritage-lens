@@ -67,7 +67,7 @@ resource "google_compute_instance_template" "heritage_template" {
     else
       git pull
     fi
-
+    
     python3 -m venv venv
     source venv/bin/activate
     pip install --upgrade pip
@@ -128,6 +128,11 @@ server {
         proxy_set_header X-Real-IP \$remote_addr;
         proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
         proxy_set_header X-Forwarded-Proto \$scheme;
+
+        # --- WebSocket support ---
+        proxy_http_version 1.1;
+        proxy_set_header Upgrade $http_upgrade;
+        proxy_set_header Connection "upgrade";
     }
     location /api/ {
         proxy_pass http://127.0.0.1:8000/api/;
@@ -169,6 +174,9 @@ resource "google_compute_region_instance_group_manager" "heritage_group" {
   #   health_check      = google_compute_health_check.default.self_link
   #   initial_delay_sec = 300
   # }
+  lifecycle {
+    create_before_destroy = true
+  }
 }
 
 # Optionally add a health check for true production-grade
