@@ -1,5 +1,5 @@
 resource "google_compute_network" "vpc_network" {
-  name = var.vpc_name
+  name = "${var.project_name}-vpc"
 }
 
 resource "google_compute_subnetwork" "private_subnet" {
@@ -10,7 +10,7 @@ resource "google_compute_subnetwork" "private_subnet" {
 }
 
 resource "google_compute_firewall" "allow_ssh" {
-  name    = "allow-ssh"
+  name    = "${var.project_name}-allow-ssh"
   network = google_compute_network.vpc_network.name
 
   allow {
@@ -21,7 +21,7 @@ resource "google_compute_firewall" "allow_ssh" {
 }
 
 resource "google_compute_firewall" "allow_http" {
-  name    = "allow-http"
+  name    = "${var.project_name}-allow-http"
   network = google_compute_network.vpc_network.name
 
   allow {
@@ -33,7 +33,7 @@ resource "google_compute_firewall" "allow_http" {
 }
 
 resource "google_compute_firewall" "allow_https" {
-  name    = "allow-https"
+  name    = "${var.project_name}-allow-https"
   network = google_compute_network.vpc_network.name
 
   allow {

@@ -8,11 +8,6 @@ variable "project_name" {
   type        = string
 }
 
-variable "vpc_name" {
-  description = "GCP VPC Name"
-  type        = string
-}
-
 variable "region" {
   description = "Region for resources"
   type        = string
