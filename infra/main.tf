@@ -94,9 +94,16 @@ resource "google_compute_instance_template" "heritage_template" {
     fi
 
     # Fetch secret from Secret Manager and export as env variable (example)
-    export MONGO_URI=$(gcloud secrets versions access latest --secret="heritage_lens_mongo_uri" --project="69116701214")
+    export MONGO_URI=$(gcloud secrets versions access latest --secret="heritage_lens_mongo_uri" --project="${var.project_id_number}")
+    export MONGO_DB_NAME=$(gcloud secrets versions access latest --secret="heritage_lens_mongo_dbname" --project="${var.project_id_number}")
+    export MONGO_COLLECTION=$(gcloud secrets versions access latest --secret="heritage_lens_mongo_db_collection" --project="${var.project_id_number}")
+
     echo "MONGO_URI=$MONGO_URI" >> /etc/environment
+    echo "MONGO_DB_NAME=$MONGO_DB_NAME" >> /etc/environment
+    echo "MONGO_COLLECTION=$MONGO_COLLECTION" >> /etc/environment
+
     # Use $MONGO_URI in your application start command or pass it as needed
+    
     apt-get update
     apt-get install -y git python3-venv nginx
     apt-get install -y certbot python3-certbot-nginx
@@ -104,12 +111,12 @@ resource "google_compute_instance_template" "heritage_template" {
     # Fetch cert, key, and config files from Secret Manager
     sudo mkdir -p /etc/letsencrypt/live/${var.domain}
 
-    gcloud secrets versions access latest --secret="cert-antiques-fullchain" --project="69116701214" | sudo tee /etc/letsencrypt/live/${var.domain}/fullchain.pem > /dev/null
-    gcloud secrets versions access latest --secret="cert-antiques-private" --project="69116701214" | sudo tee /etc/letsencrypt/live/${var.domain}/privkey.pem > /dev/null
+    gcloud secrets versions access latest --secret="cert-antiques-fullchain" --project="${var.project_id_number}" | sudo tee /etc/letsencrypt/live/${var.domain}/fullchain.pem > /dev/null
+    gcloud secrets versions access latest --secret="cert-antiques-private" --project="${var.project_id_number}" | sudo tee /etc/letsencrypt/live/${var.domain}/privkey.pem > /dev/null
     sudo chmod 600 /etc/letsencrypt/live/${var.domain}/privkey.pem
 
-    gcloud secrets versions access latest --secret="cert-antiques-options-ssl-nginx" --project="69116701214" | sudo tee /etc/letsencrypt/options-ssl-nginx.conf > /dev/null
-    gcloud secrets versions access latest --secret="cert-antiques-ssl-dhparams" --project="69116701214" | sudo tee /etc/letsencrypt/ssl-dhparams.pem > /dev/null
+    gcloud secrets versions access latest --secret="cert-antiques-options-ssl-nginx" --project="${var.project_id_number}" | sudo tee /etc/letsencrypt/options-ssl-nginx.conf > /dev/null
+    gcloud secrets versions access latest --secret="cert-antiques-ssl-dhparams" --project="${var.project_id_number}" | sudo tee /etc/letsencrypt/ssl-dhparams.pem > /dev/null
 
 
     mkdir -p /opt/${var.project_name}
