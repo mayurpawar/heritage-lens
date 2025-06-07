@@ -35,14 +35,13 @@ variable "vm_image" {
   default     = "ubuntu-os-cloud/ubuntu-2204-lts"
 }
 
-variable "mongo_uri" {
-  description = "MongoDB Atlas URI"
+variable "backend_api_url" {
+  description = "Base URL for the FastAPI backend"
   type        = string
-  sensitive   = true
 }
 
-variable "frontend_api_url" {
-  description = "Base URL for the FastAPI backend"
+variable "domain" {
+  description = "Domain on which app needs to run"
   type        = string
 }
 
