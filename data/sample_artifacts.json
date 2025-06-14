@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Statue of Shiva Nataraja",
+    "region": "India",
+    "period": "Chola Dynasty",
+    "description": "A bronze statue representing the Hindu god Shiva as the cosmic dancer.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/2/21/India_statue_of_nataraja.jpg",
+    "themes": ["divinity", "dance", "cosmos"]
+  },
+  {
+    "title": "Terracotta Army Figure",
+    "region": "China",
+    "period": "Qin Dynasty",
+    "description": "A life-size figure from the famous Terracotta Army burial site.",
+    "image_url": "https://upload.wikimedia.org/wikipedia/commons/thumb/7/7c/Soldier_Horse.JPG/400px-Soldier_Horse.JPG",
+    "themes": ["funerary", "military", "imperial"]
+  }
+]

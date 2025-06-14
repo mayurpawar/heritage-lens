@@ -1,0 +1,69 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+*.so
+*.egg-info/
+.env
+.venv/
+venv/
+ENV/
+env/
+.Python
+pip-log.txt
+pip-delete-this-directory.txt
+
+# Streamlit secrets
+app/.streamlit/secrets.toml
+app/ui/.streamlit/secrets.toml
+
+# Data
+*.sqlite3
+data/*.db
+data/*.sqlite
+data/*.log
+
+# VS Code, PyCharm, etc
+.vscode/
+.idea/
+*.swp
+
+# Jupyter Notebook
+.ipynb_checkpoints
+*.ipynb
+
+# OS junk
+.DS_Store
+Thumbs.db
+
+# Terraform
+infra/.terraform/
+infra/.terraform.lock.hcl
+infra/terraform.tfstate
+infra/terraform.tfstate.*
+infra/terraform.tfvars
+infra/.envrc
+
+# Other secrets (never commit)
+*.secret
+*.key
+*.pem
+*.crt
+
+# Logs
+*.log
+logs/
+
+# Misc
+node_modules/
+dist/
+build/
+coverage/
+htmlcov/
+
+# Backup files
+*~
+*.bak
+*.tmp
