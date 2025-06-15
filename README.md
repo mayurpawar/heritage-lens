@@ -16,14 +16,14 @@
 8. [Accomplishments that we're proud of](#-accomplishments-that-were-proud-of)
 9. [Challenges](#-challenges)
 10. [What’s Next](#-whats-next)
-11. [Installation Guide & Code Walkthrough](#installation-guide--code-walkthrough)
-    - [Infrastructure Provisioning (Terraform)](#infrastructure-provisioning-terraform)
-    - [Application Setup](#application-setup)
-    - [Running the Backend](#running-the-backend)
-    - [Running the UI](#running-the-ui)
-    - [Data Preparation & Embeddings](#data-preparation--embeddings)
-    - [Code Walkthrough](#code-walkthrough)
-    - [Application URLs](#application-urls)
+11. [Installation Guide & Code Walkthrough](#-installation-guide--code-walkthrough)
+    - [Infrastructure Provisioning (Terraform)](#1-infrastructure-provisioning-terraform)
+    - [Application Setup](#2-application-setup)
+    - [Running the Backend](#3-running-the-backend)
+    - [Running the UI](#4-running-the-ui)
+    - [Data Preparation & Embeddings](#5-data-preparation--embeddings)
+    - [Code Walkthrough](#6-code-walkthrough)
+    - [Application URLs](#7-application-urls)
 
 ---
 
@@ -151,7 +151,7 @@ This project is open source and can be deployed on Google Cloud using Terraform.
 
 ---
 
-### 1. Infrastructure Provisioning (Terraform)
+### Infrastructure Provisioning (Terraform)
 
 Terraform scripts are in [`infra/`](https://github.com/mayurpawar/heritage-lens/tree/main/infra)
 
@@ -176,7 +176,7 @@ terraform apply
 ```
 ---
 
-### 2. Application Setup
+### Application Setup
 
 ✅ These steps are executed during step 1 when VM starup script runs and hence no need to execute. Adding it here for info and debugging if required.
 SSH into the provisioned VM and set up the application: 
@@ -196,7 +196,7 @@ pip install -r requirements.txt
 
 ---
 
-### 3. Running the Backend
+### Running the Backend
 
 ✅ These steps are executed during step 1 when VM starup script runs and hence no need to execute. Adding it here for info and debugging if required.
 Start the FastAPI backend server:
@@ -213,7 +213,7 @@ Key endpoints:
 
 ---
 
-### 4. Running the UI
+### Running the UI
 
 ✅ These steps are executed during step 1 when VM starup script runs and hence no need to execute. Adding it here for info and debugging if required.
 Start the Streamlit frontend:
@@ -227,7 +227,7 @@ streamlit run app.py --server.port 8501
 
 ---
 
-### 5. Data Preparation & Embeddings
+### Data Preparation & Embeddings
 
 Run the embedding script to process artifact data using Vertex AI:
 
