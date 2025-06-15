@@ -13,16 +13,16 @@
 5. [How I Built It](#how-i-built-it)
 6. [Data Pipeline / Hybrid Search Diagram](#data-pipeline--hybrid-search-diagram)
 7. [What I Learned](#what-i-learned)
-8. [Challenges](#challenges)
+8. [Challenges](#8-challenges)
 9. [What’s Next](#whats-next)
 10. [Installation Guide & Code Walkthrough](#installation-guide--code-walkthrough)
-    - [1. Infrastructure Provisioning (Terraform)](#1-infrastructure-provisioning-terraform)
-    - [2. Application Setup](#2-application-setup)
-    - [3. Running the Backend](#3-running-the-backend)
-    - [4. Running the UI](#4-running-the-ui)
-    - [5. Data Preparation & Embeddings](#5-data-preparation--embeddings)
+    - [Infrastructure Provisioning (Terraform)](#infrastructure-provisioning-terraform)
+    - [Application Setup](#application-setup)
+    - [Running the Backend](#running-the-backend)
+    - [Running the UI](#running-the-ui)
+    - [Data Preparation & Embeddings](#data-preparation--embeddings)
     - [Code Walkthrough](#code-walkthrough)
-    - [Application URLs](#deployment--urls)
+    - [Application URLs](#application-urls)
 
 ---
 
