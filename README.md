@@ -240,7 +240,7 @@ heritage-lens/
 │   │    └── vertexai.py   # Vertex AI interface
 ├── ui/                 # Streamlit UI
 │   └── app.py
-│   └── assets          # Hold required media files 
+│   └── assets          # Holds required media files 
 ├── ai_loader/          # Embedding & data scripts
 │   └── batch_embed_vertex.py
 ├── infra/              # Terraform infrastructure
