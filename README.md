@@ -166,11 +166,15 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Set environment variables manually or create a `.env` file:
+Set environment variables:
 
 ```bash
-export MONGODB_URI="mongodb+srv://<your-connection>"
-export GOOGLE_APPLICATION_CREDENTIALS="/path/to/your-service-account.json"
+export MONGO_URI=$(gcloud secrets versions access latest --secret="heritage_lens_mongo_uri" --project="${var.project_id_number}")
+export MONGO_DB_NAME=$(gcloud secrets versions access latest --secret="heritage_lens_mongo_dbname" --project="${var.project_id_number}")
+export MONGO_COLLECTION=$(gcloud secrets versions access latest --secret="heritage_lens_mongo_db_collection" --project="${var.project_id_number}")
+echo "MONGO_URI=$MONGO_URI" >> /etc/environment
+echo "MONGO_DB_NAME=$MONGO_DB_NAME" >> /etc/environment
+echo "MONGO_COLLECTION=$MONGO_COLLECTION" >> /etc/environment
 ```
 
 ---
