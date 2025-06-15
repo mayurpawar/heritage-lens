@@ -27,7 +27,7 @@
 
 ---
 
-## 🌍 Inspiration
+## 1. 🌍 Inspiration
 
 Having travelled to multiple countries and explored some of the world’s most iconic museums—including the Louvre Museum in Paris and the British Museum in London—I’ve always been fascinated by how cultural heritage connects us all. The thrill of wandering through galleries, discovering ancient artifacts, and imagining their stories made me wish for a way to recreate that sense of discovery online, powered by AI.
 
@@ -37,7 +37,7 @@ When I saw the hackathon’s challenge to blend Google Cloud and MongoDB Atlas, 
 
 ---
 
-## 🔍 What It Does
+## 2. 🔍 What It Does
 
 **Heritage Lens** lets users discover artifacts from public datasets simply by describing them—just like you’d do when talking to a guide in a museum. It uses:
 
@@ -47,7 +47,7 @@ When I saw the hackathon’s challenge to blend Google Cloud and MongoDB Atlas, 
 
 ---
 
-## 🧭 High-Level Architecture
+## 3. 🧭 High-Level Architecture
 
 ![High-Level Architecture Diagram](./app/ui/assets/heritage_lens_architecture.png)
 
@@ -61,7 +61,7 @@ When I saw the hackathon’s challenge to blend Google Cloud and MongoDB Atlas, 
 
 ---
 
-## 🎨 User Experience
+## 4. 🎨 User Experience
 
 ![User Experience Flow](./app/ui/assets/heritage_lens_user_experience.png)
 
@@ -70,7 +70,7 @@ User enters a query → AI-powered hybrid search → Artifact results with image
 
 ---
 
-## ⚙️ How I Built It
+## 5. ⚙️ How I Built It
 
 - **Backend:** Python & FastAPI for APIs and hybrid search logic
 - **Frontend:** Streamlit for a beautiful, responsive web experience
@@ -82,7 +82,7 @@ User enters a query → AI-powered hybrid search → Artifact results with image
 - **CI/CD:** GitHub for source control 
 ---
 
-## 🔁 Data Pipeline / Hybrid Search Diagram
+## 6. 🔁 Data Pipeline / Hybrid Search Diagram
 
 ![Hybrid Search Logic](./app/ui/assets/heritage_lens_hybrid_search.png)
 
@@ -93,7 +93,7 @@ User enters a query → AI-powered hybrid search → Artifact results with image
 
 ---
 
-## 🧱 Challenges
+## 7. 🧱 Challenges
 
 - Cleaning and embedding large public datasets
 - Optimizing relevance scoring across modalities
@@ -102,7 +102,7 @@ User enters a query → AI-powered hybrid search → Artifact results with image
 
 ---
 
-## 🏅 Accomplishments that we're proud of
+## 8. 🏅 Accomplishments that we're proud of
 
 - **Full Hybrid Search in Production:**  
   Delivered a seamless hybrid search experience that fuses semantic vector search and classic text search—ranking and reranking results for both intuitive discovery and precision, just like a real museum guide.
@@ -129,7 +129,7 @@ User enters a query → AI-powered hybrid search → Artifact results with image
   The project combines my passions for travel, culture, and technology—bringing together inspiration from real-life museum visits with state-of-the-art AI and cloud.
 
 ---
-## 🧠 What I Learned
+## 9. 🧠 What I Learned
 
 - **Semantic AI unlocks true exploration:** Vertex AI and MongoDB vector search allow natural language queries, not just keywords.
 - **Hybrid search is a superpower:** Combining classic and semantic search brings both intuition and precision.
@@ -137,7 +137,7 @@ User enters a query → AI-powered hybrid search → Artifact results with image
 - **Adaptability:** On the last hackathon day, I bought the new domain [heritage-lens.org](heritage-lens.org). While the domain is very new and may be blocked in organisations due domain age criteria, I also deployed the project on my main domain for redundancy: [heritage.mayurpawar.com](https://heritage.mayurpawar.com).
 
 ---
-## 🚀 What’s Next
+## 10. 🚀 What’s Next
 
 - Add image search and multilingual capabilities
 - Expand artifact datasets and allow public curation
@@ -145,13 +145,13 @@ User enters a query → AI-powered hybrid search → Artifact results with image
 
 ---
 
-## 🛠️ Installation Guide & Code Walkthrough
+## 11. 🛠️ Installation Guide & Code Walkthrough
 
 This project is open source and can be deployed on Google Cloud using Terraform. Make sure that you have terraform installed on your system or have terraform image if you are using K8S hosted provisioning pipelines.
 
 ---
 
-### Infrastructure Provisioning (Terraform)
+### 11.1 Infrastructure Provisioning (Terraform)
 
 Terraform scripts are in [`infra/`](https://github.com/mayurpawar/heritage-lens/tree/main/infra)
 
@@ -176,7 +176,7 @@ terraform apply
 ```
 ---
 
-### Application Setup
+### 11.2 Application Setup
 
 ✅ These steps are executed during step 1 when VM starup script runs and hence no need to execute. Adding it here for info and debugging if required.
 SSH into the provisioned VM and set up the application: 
@@ -196,7 +196,7 @@ pip install -r requirements.txt
 
 ---
 
-### Running the Backend
+### 11.3 Running the Backend
 
 ✅ These steps are executed during step 1 when VM starup script runs and hence no need to execute. Adding it here for info and debugging if required.
 Start the FastAPI backend server:
@@ -213,7 +213,7 @@ Key endpoints:
 
 ---
 
-### Running the UI
+### 11.4 Running the UI
 
 ✅ These steps are executed during step 1 when VM starup script runs and hence no need to execute. Adding it here for info and debugging if required.
 Start the Streamlit frontend:
@@ -227,7 +227,7 @@ streamlit run app.py --server.port 8501
 
 ---
 
-### Data Preparation & Embeddings
+### 11.5 Data Preparation & Embeddings
 
 Run the embedding script to process artifact data using Vertex AI:
 
@@ -248,7 +248,7 @@ This script:
 
 ---
 
-### Code Walkthrough of Important files
+### 11.6 Code Walkthrough of Important files
 
 ```bash
 heritage-lens/
@@ -281,7 +281,7 @@ heritage-lens/
 
 ---
 
-### Application URLs
+### 11.7 Application URLs
 
 - **Primary Domain**: [https://heritage-lens.org](https://heritage-lens.org)
 - **Backup Domain**: [https://heritage.mayurpawar.com](https://heritage.mayurpawar.com)
