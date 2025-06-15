@@ -143,7 +143,7 @@ resource "google_compute_instance_template" "heritage_template" {
     # Streamlit secrets for API_URL
     mkdir -p /opt/${var.project_name}/.streamlit
     cat >/opt/${var.project_name}/.streamlit/secrets.toml <<EOF
-API_URL = "${var.backend_api_url}"
+API_URL = "https://${var.domain}/api/explorer/search"
 EOF
 
     # FASTAPI SYSTEMD SERVICE
