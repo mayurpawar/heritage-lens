@@ -133,7 +133,7 @@ User enters a query → AI-powered hybrid search → Artifact results with image
 - **Semantic AI unlocks true exploration:** Vertex AI and MongoDB vector search allow natural language queries, not just keywords.
 - **Hybrid search is a superpower:** Combining classic and semantic search brings both intuition and precision.
 - **Cloud automation:** Using Secret Manager, Certbot, and Terraform made the stack robust and reproducible.
-- **Adaptability:** On the last hackathon day, I bought the new domain [heritage-lens.org](heritage-lens.org). While the domain is very new and may be blocked in some regions, I also deployed the project on my main domain for redundancy: [heritage.mayurpawar.com](https://heritage.mayurpawar.com).
+- **Adaptability:** On the last hackathon day, I bought the new domain [heritage-lens.org](heritage-lens.org). While the domain is very new and may be blocked in organisations due domain age criteria, I also deployed the project on my main domain for redundancy: [heritage.mayurpawar.com](https://heritage.mayurpawar.com).
 
 ---
 ## 🚀 What’s Next
@@ -285,5 +285,4 @@ heritage-lens/
 - **Primary Domain**: [https://heritage-lens.org](https://heritage-lens.org)
 - **Backup Domain**: [https://heritage.mayurpawar.com](https://heritage.mayurpawar.com)
 
-> DNS and SSL provisioning may take a few minutes post-deployment. Check SSL status with your browser or run `curl -I https://heritage-lens.org`.
 
