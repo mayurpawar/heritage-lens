@@ -239,7 +239,7 @@ NGINX_CONF
   EOT
 
   metadata = {
-    BACKEND_API_URL    = var.backend_api_url
+    BACKEND_API_URL    = "https://${var.domain}/api/explorer/search"
   }
 }
 

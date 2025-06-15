@@ -40,8 +40,13 @@ variable "vm_image" {
   default     = "ubuntu-os-cloud/ubuntu-2204-lts"
 }
 
-variable "backend_api_url" {
-  description = "Base URL for the FastAPI backend"
+variable "secret_name_cert_fullchain" {
+  description = "Secret name for SSL certificates fullchain.pem"
+  type        = string
+}
+
+variable "secret_name_cert_privatekey" {
+  description = "Secret name for SSL certificates private key"
   type        = string
 }
 
