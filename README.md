@@ -6,8 +6,8 @@
 
 ## 📑 Table of Contents
 
-[🌍 Inspiration](#-inspiration)
-[🔍 What It Does](#-what-it-does)
+1. [Inspiration](#-inspiration)
+2. [What It Does](#-what-it-does)
 3. [High-Level Architecture](#-high-level-architecture)
 4. [User Experience](#-user-experience)
 5. [How I Built It](#-how-i-built-it)
