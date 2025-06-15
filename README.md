@@ -75,7 +75,7 @@ User enters a query → AI-powered hybrid search → Artifact results with image
 - **Frontend:** Streamlit for a beautiful, responsive web experience
 - **AI/Embeddings:** Google Vertex AI for semantic embeddings
 - **Database:** MongoDB Atlas, using both vector and text indexes
-- **Datasets:** The MET Museum Open Access & Smithsonian Open Access.
+- **Datasets:** [The MET Museum Open Access](https://www.metmuseum.org/about-the-met/policies-and-documents/open-access) & [Smithsonian Open Access](https://www.si.edu/openaccess).
 - **Hybrid Search:** Python merges and reranks vector and text search results for the best user experience
 - **Deployment:** GCP Compute Engine, Nginx as reverse proxy, Certbot & Secret Manager for automated SSL, Terraform for IaC
 - **CI/CD:** GitHub for source control 
@@ -133,7 +133,7 @@ User enters a query → AI-powered hybrid search → Artifact results with image
 - **Semantic AI unlocks true exploration:** Vertex AI and MongoDB vector search allow natural language queries, not just keywords.
 - **Hybrid search is a superpower:** Combining classic and semantic search brings both intuition and precision.
 - **Cloud automation:** Using Secret Manager, Certbot, and Terraform made the stack robust and reproducible.
-- **Adaptability:** On the last hackathon day, I bought the new domain [heritage-lens.org]. While the domain is very new and may be blocked in some regions, I also deployed the project on my main domain for redundancy: [https://heritage.mayurpawar.com](https://heritage.mayurpawar.com).
+- **Adaptability:** On the last hackathon day, I bought the new domain [heritage-lens.org](heritage-lens.org). While the domain is very new and may be blocked in some regions, I also deployed the project on my main domain for redundancy: [heritage.mayurpawar.com](https://heritage.mayurpawar.com).
 
 ---
 ## 🚀 What’s Next
