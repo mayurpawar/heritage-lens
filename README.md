@@ -1,4 +1,4 @@
-# Heritage Lens
+# Heritage Lens - AI-Powered Cultural Explorer
 
 ![Project Logo](./app/ui/assets/logo-medium.png)
 
