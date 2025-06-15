@@ -178,7 +178,7 @@ terraform apply
 
 ### 11.2 Application Setup
 
-✅ These steps are executed during step 1 when VM starup script runs and hence no need to execute. Adding it here for info and debugging if required.
+✅ These steps are executed during step 1 when VM startup script runs and hence no need to execute. Adding it here for info and debugging if required.
 SSH into the provisioned VM and set up the application: 
 
 ```bash
@@ -198,7 +198,7 @@ pip install -r requirements.txt
 
 ### 11.3 Running the Backend
 
-✅ These steps are executed during step 1 when VM starup script runs and hence no need to execute. Adding it here for info and debugging if required.
+✅ These steps are executed during step 1 when VM startup script runs and hence no need to execute. Adding it here for info and debugging if required.
 Start the FastAPI backend server:
 
 ```bash
@@ -215,7 +215,7 @@ Key endpoints:
 
 ### 11.4 Running the UI
 
-✅ These steps are executed during step 1 when VM starup script runs and hence no need to execute. Adding it here for info and debugging if required.
+✅ These steps are executed during step 1 when VM startup script runs and hence no need to execute. Adding it here for info and debugging if required.
 Start the Streamlit frontend:
 
 ```bash
