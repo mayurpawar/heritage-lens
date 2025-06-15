@@ -96,7 +96,7 @@ User enters a query → AI-powered hybrid search → Artifact results with image
 - **Semantic AI unlocks true exploration:** Vertex AI and MongoDB vector search allow natural language queries, not just keywords.
 - **Hybrid search is a superpower:** Combining classic and semantic search brings both intuition and precision.
 - **Cloud automation:** Using Secret Manager, Certbot, and Terraform made the stack robust and reproducible.
-- **Adaptability:** On the last hackathon day, I bought the new domain `heritage-lens.org`. While the domain is very new and may be blocked in some regions, I also deployed the project on my main domain for redundancy: [https://heritage.mayurpawar.com](https://heritage.mayurpawar.com).
+- **Adaptability:** On the last hackathon day, I bought the new domain [heritage-lens.org]. While the domain is very new and may be blocked in some regions, I also deployed the project on my main domain for redundancy: [https://heritage.mayurpawar.com](https://heritage.mayurpawar.com).
 
 ---
 
