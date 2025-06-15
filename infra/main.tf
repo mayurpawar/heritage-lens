@@ -117,12 +117,12 @@ resource "google_compute_instance_template" "heritage_template" {
     # Fetch cert, key, and config files from Secret Manager
     sudo mkdir -p /etc/letsencrypt/live/${var.domain}
 
-    gcloud secrets versions access latest --secret="cert-antiques-fullchain" --project="${var.project_id_number}" | sudo tee /etc/letsencrypt/live/${var.domain}/fullchain.pem > /dev/null
-    gcloud secrets versions access latest --secret="cert-antiques-private" --project="${var.project_id_number}" | sudo tee /etc/letsencrypt/live/${var.domain}/privkey.pem > /dev/null
+    gcloud secrets versions access latest --secret="${var.secret_name_cert_fullchain}" --project="${var.project_id_number}" | sudo tee /etc/letsencrypt/live/${var.domain}/fullchain.pem > /dev/null
+    gcloud secrets versions access latest --secret="${var.secret_name_cert_privatekey}" --project="${var.project_id_number}" | sudo tee /etc/letsencrypt/live/${var.domain}/privkey.pem > /dev/null
     sudo chmod 600 /etc/letsencrypt/live/${var.domain}/privkey.pem
 
-    gcloud secrets versions access latest --secret="cert-antiques-options-ssl-nginx" --project="${var.project_id_number}" | sudo tee /etc/letsencrypt/options-ssl-nginx.conf > /dev/null
-    gcloud secrets versions access latest --secret="cert-antiques-ssl-dhparams" --project="${var.project_id_number}" | sudo tee /etc/letsencrypt/ssl-dhparams.pem > /dev/null
+    gcloud secrets versions access latest --secret="cert-options-ssl-nginx-conf" --project="${var.project_id_number}" | sudo tee /etc/letsencrypt/options-ssl-nginx.conf > /dev/null
+    gcloud secrets versions access latest --secret="cert-ssl-dhparams-pem" --project="${var.project_id_number}" | sudo tee /etc/letsencrypt/ssl-dhparams.pem > /dev/null
 
 
     mkdir -p /opt/${var.project_name}
