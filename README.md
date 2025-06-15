@@ -6,7 +6,7 @@
 
 ## 📑 Table of Contents
 
-1. [Inspiration](#inspiration)
+1. [Inspiration](#-inspiration)
 2. [What It Does](#what-it-does)
 3. [High-Level Architecture](#high-level-architecture)
 4. [User Experience](#user-experience)
