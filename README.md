@@ -22,7 +22,7 @@
     - [4. Running the UI](#4-running-the-ui)
     - [5. Data Preparation & Embeddings](#5-data-preparation--embeddings)
     - [Code Walkthrough](#code-walkthrough)
-    - [Deployment & URLs](#deployment--urls)
+    - [Application URLs](#deployment--urls)
 
 ---
 
@@ -253,7 +253,7 @@ heritage-lens/
 
 ---
 
-### Deployment & URLs
+### Application URLs
 
 - **Primary Domain**: [https://heritage-lens.org](https://heritage-lens.org)
 - **Backup Domain**: [https://heritage.mayurpawar.com](https://heritage.mayurpawar.com)
