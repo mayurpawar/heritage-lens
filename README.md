@@ -40,7 +40,7 @@ When I saw the hackathon’s challenge to blend Google Cloud and MongoDB Atlas, 
 
 **Heritage Lens** lets users discover artifacts from public datasets simply by describing them—just like you’d do when talking to a guide in a museum. It uses:
 
-- Semantic search via Vertex AI
+- Embedding via Vertex AI and semantic search via MongoDB vector search
 - Text search via MongoDB Atlas
 - A hybrid scoring mechanism to combine both
 
@@ -52,11 +52,11 @@ When I saw the hackathon’s challenge to blend Google Cloud and MongoDB Atlas, 
 
 **Stack Overview**:
 
-- **Frontend**: Streamlit
+- **Frontend**: Streamlit, Nginx
 - **Backend**: FastAPI
 - **AI Embeddings**: Google Vertex AI
 - **Database**: MongoDB Atlas (text + vector search)
-- **Infra**: GCP Compute Engine, Nginx, Certbot, Secret Manager
+- **Infra**: Google Cloud Platform (VMs, VM Templates, VM Groups, Cloud DNS, Secret Manager, Storage)
 
 ---
 
@@ -75,6 +75,7 @@ User enters a query → AI-powered hybrid search → Artifact results with image
 - **Frontend:** Streamlit for a beautiful, responsive web experience
 - **AI/Embeddings:** Google Vertex AI for semantic embeddings
 - **Database:** MongoDB Atlas, using both vector and text indexes
+- **Datasets:** The MET Museum Open Access & Smithsonian Open Access.
 - **Hybrid Search:** Python merges and reranks vector and text search results for the best user experience
 - **Deployment:** GCP Compute Engine, Nginx as reverse proxy, Certbot & Secret Manager for automated SSL, Terraform for IaC
 - **CI/CD:** GitHub for source control 
@@ -91,15 +92,6 @@ User enters a query → AI-powered hybrid search → Artifact results with image
 
 ---
 
-## 🧠 What I Learned
-
-- **Semantic AI unlocks true exploration:** Vertex AI and MongoDB vector search allow natural language queries, not just keywords.
-- **Hybrid search is a superpower:** Combining classic and semantic search brings both intuition and precision.
-- **Cloud automation:** Using Secret Manager, Certbot, and Terraform made the stack robust and reproducible.
-- **Adaptability:** On the last hackathon day, I bought the new domain [heritage-lens.org]. While the domain is very new and may be blocked in some regions, I also deployed the project on my main domain for redundancy: [https://heritage.mayurpawar.com](https://heritage.mayurpawar.com).
-
----
-
 ## 🧱 Challenges
 
 - Cleaning and embedding large public datasets
@@ -109,6 +101,41 @@ User enters a query → AI-powered hybrid search → Artifact results with image
 
 ---
 
+## 🏅 Accomplishments that we're proud of
+
+- **Full Hybrid Search in Production:**  
+  Delivered a seamless hybrid search experience that fuses semantic vector search and classic text search—ranking and reranking results for both intuitive discovery and precision, just like a real museum guide.
+
+- **End-to-End AI Data Pipeline:**  
+  Automated embedding generation at scale using Google Vertex AI, and integrated those embeddings into MongoDB Atlas for lightning-fast semantic search on thousands of artifacts.
+
+- **Cloud-Native, Secure & Scalable:**  
+  Designed the project from scratch for cloud deployment:  
+  - Infrastructure as Code (Terraform)  
+  - Automated SSL/secret handling  
+  - Modular architecture that’s both reproducible and ready for real-world scaling.
+
+- **User Experience & Accessibility:**  
+  Created a responsive Streamlit web app that lets anyone—regardless of background or expertise—explore cultural heritage collections with natural language, images, and location-based cues.
+
+- **Rapid, End-to-End Delivery:**  
+  Built and launched the full stack (UI, backend, ML pipeline, data pipeline, cloud infra, and security) in a short hackathon window, all while deploying to two public domains.
+
+- **Open Source & Reproducible:**  
+  The codebase is fully open, reusable, and documented, making it easy for others to build upon or adapt for new datasets and domains.
+
+- **Personal Touch:**  
+  The project combines my passions for travel, culture, and technology—bringing together inspiration from real-life museum visits with state-of-the-art AI and cloud.
+
+---
+## 🧠 What I Learned
+
+- **Semantic AI unlocks true exploration:** Vertex AI and MongoDB vector search allow natural language queries, not just keywords.
+- **Hybrid search is a superpower:** Combining classic and semantic search brings both intuition and precision.
+- **Cloud automation:** Using Secret Manager, Certbot, and Terraform made the stack robust and reproducible.
+- **Adaptability:** On the last hackathon day, I bought the new domain [heritage-lens.org]. While the domain is very new and may be blocked in some regions, I also deployed the project on my main domain for redundancy: [https://heritage.mayurpawar.com](https://heritage.mayurpawar.com).
+
+---
 ## 🚀 What’s Next
 
 - Add image search and multilingual capabilities
