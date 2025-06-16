@@ -8,4 +8,4 @@ cidr_range                  = "10.10.0.0/24"
 vm_image                    = "ubuntu-os-cloud/ubuntu-2204-lts"
 secret_name_cert_fullchain  = "{your SSL cert's secret name}"
 secret_name_cert_privatekey = "{your SSL cert's private key's secret name}"
-domain                      = "example.com" // If this not available, leave it as it is. You still can access your app with VM's public IP. It is just that it will show warning message about SSL's ownership.
+domain                      = "mayurpawar.com" // If this not available, leave it as it is. You still can access your app with VM's public IP. It is just that it will show warning message about SSL's ownership.
