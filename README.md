@@ -16,7 +16,7 @@
 8. [Accomplishments that we're proud of](#8--accomplishments-that-were-proud-of)
 9. [Challenges](#9--challenges)
 10. [What’s Next](#10--whats-next)
-11. [Installation Guide & Code Walkthrough](#11--installation-guide--code-walkthrough)
+11. [Installation Guide & Code Walkthrough](#11-%EF%B8%8F-installation-guide--code-walkthrough)
     - [Infrastructure Provisioning (Terraform)](#111-infrastructure-provisioning-terraform)
     - [Application Setup](#112-application-setup)
     - [Running the Backend](#113-running-the-backend)
