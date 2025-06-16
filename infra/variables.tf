@@ -32,7 +32,7 @@ variable "cidr_range" {
 
 variable "vm_machine_type" {
   description = "VM machine type"
-  default     = "e2-medium"
+  default     = "e2-small"
 }
 
 variable "vm_image" {
