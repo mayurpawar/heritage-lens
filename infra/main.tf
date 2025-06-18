@@ -251,7 +251,7 @@ resource "google_compute_region_instance_group_manager" "heritage_group" {
     instance_template = google_compute_instance_template.heritage_template.id
   }
   base_instance_name  = "${var.project_name}"
-  target_size         = 1
+  target_size         = 2
   # Uncomment for autoscaling:
   # auto_healing_policies {
   #   health_check      = google_compute_health_check.default.self_link
